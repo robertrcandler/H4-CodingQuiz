@@ -3,7 +3,6 @@ var importjava = document.createElement('script');
 importjava.src = 'questions.js';
 document.head.appendChild(importjava);
 
-
 //assign quiz page a variable
 var questionContainer = document.getElementById("questionContainer");
 
@@ -84,7 +83,17 @@ function selectChoice(i) {
 
 }
 
+//the quiz is over
+var yourScore = document.getElementById("yourScore");
+var scoreContainer = document.getElementById("scoreContainer");
+function endQuiz() {
+    questionContainer.classList.add('hide');
+    scoreContainer.classList.remove('hide');
+    //display score
+    yourScore.innerText="Your Score: "+score;
+}
 
 
+//Notes for later:
 //combine functions and make a for loop of each of the questions
 //then make an if statement for the timer
