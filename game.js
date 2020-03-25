@@ -68,9 +68,11 @@ function resetChoices() {
     }
         
 }
-
-function selectanswer() {
-
+//helpful link https://www.youtube.com/watch?v=riDzcEQbX6k
+//watched till about the 23 minute mark
+function selectChoice(i) {
+ var selectedchoice = i.target;
+ var correctchoice = selectChoice.dataset.answer;
 }
 
 function submitfunction() {
