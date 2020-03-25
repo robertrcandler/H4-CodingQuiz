@@ -9,8 +9,8 @@ var questionContainer = document.getElementById("questionContainer");
 
 //question number keep track of how many questions gone through
 var currentQuestion = 0;
-//submitbutton 
-var submitbtn = document.getElementById('submitbtn');
+//keep track of score
+var score = 0;
 
 //start-button javascript stuff
 var startbtn = document.getElementById('startbtn');
@@ -37,21 +37,17 @@ var answerButtons=document.getElementById("answerButtons");
 function  questionNum(i) {
     //show question
     questionhtml.innerText=questions[i].title;
-    console.log(questions[i].title);
     //show answer
     for (var j=0;j<4;) {
         var button = document.createElement('button');
         button.innerText = questions[i].choices[j];
+        button.value = questions[i].choices[j];
         button.classList.add("btn");
-        button.addEventListener('click', selectanswer);
+        button.addEventListener('click', selectChoice);
         //check if choice is correct
         //I have no idea if this works
-        if (questions[i].choices[j] === questions[i].answer[0]) {
-            button.dataset.answer = questions[i].answer[0];
-            
-        }
+        
         answerButtons.appendChild(button);
-        console.log(questions[i].choices[j]);
         j++;
     }
 
@@ -59,7 +55,6 @@ function  questionNum(i) {
 
 //get rid of answer choices after next question
 function resetChoices() {
-    submitbtn.classList.add('hide');
     //get rid of old buttons
     for (var j=0;j<1;) {
         if (answerButtons.firstChild) {
@@ -68,16 +63,28 @@ function resetChoices() {
     }
         
 }
-//helpful link https://www.youtube.com/watch?v=riDzcEQbX6k
-//watched till about the 23 minute mark
+
+//test if selected answer is correct and go to next question
 function selectChoice(i) {
  var selectedchoice = i.target;
- var correctchoice = selectChoice.dataset.answer;
+    // check if user guessed wrong
+    if (this.value === questions[currentQuestion].answer) {
+        score++;
+        console.log('Score: '+score);
+    }
+    // Change to next question
+    console.log('Score: '+score);
+    currentQuestion++;
+    //Go to next question or end quiz
+    if (currentQuestion === questions.length) {
+        endQuiz();
+    } else {
+        nextQuestion();
+    }
+
 }
 
-function submitfunction() {
 
-}
 
 //combine functions and make a for loop of each of the questions
 //then make an if statement for the timer
