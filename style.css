@@ -32,7 +32,7 @@ body {
     outline: none;
 }
 
-.start-btn, .submitbtn {
+.startbtn, .submitbtn {
     display: inline;
     justify-content: center;
     align-items: center;
