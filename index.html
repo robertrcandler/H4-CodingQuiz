@@ -1,17 +1,45 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Robert's Coding Quiz</title>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!--Other Files-->
+    <script src="questions.js"></script>
+    <script src="game.js"></script>
+    <script src="score.js"></script>
+    <html src="highscore.html"></html>
 
-    <title>Robert's Coding Quiz</title>
   </head>
+
   <body>
     <h1>Robert's Coding Quiz</h1>
+
+    <!--Making Quiz Form-->
+    <form id = "Quiz" name="Quiz">
+      <!--Question Here-->
+      <p>Input question line from js here</p>
+      <br>
+      <!--Answer choices-->
+      <input type="radio" id="mc" name="a0" value="callFunctionFromGame">CallAnswerChoiceFromGame<br>
+      <input type="radio" id="mc" name="a1" value="callFunctionFromGame">CallAnswerChoiceFromGame<br>
+      <input type="radio" id="mc" name="a2" value="callFunctionFromGame">CallAnswerChoiceFromGame<br>
+      <input type="radio" id="mc" name="a3" value="callFunctionFromGame">CallAnswerChoiceFromGame<br>
+      <!--Submit Button-->
+      <input type="button" id="button" value="Submit" onclick="checkAnswer();">
+    
+    </form>
+
+    <!--Show correct or false-->
+    <div id="qResult">
+      <p id="answerResult"></p>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
