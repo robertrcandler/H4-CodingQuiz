@@ -1,0 +1,50 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flexbox;
+    width: max-content;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    max-width: 50%;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.btn-grid {
+    display: inline;
+    gap: 10px;
+    margin: 10px 10px;
+
+}
+
+.btn {
+    background-color: purple;
+    color: white;
+    border: 2px solid;
+    padding: 5px 5px;
+    border: 5px;
+    outline: none;
+}
+
+.start-btn, .submitbtn {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.controls {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}

@@ -1,7 +1,21 @@
-function checkAnswer() {
-    alert("Checking");
-    //Make Question Result Visible
-    document.getElementById("qResult").style.visibility = "visible";
+//load questions.js
+var importjava = document.createElement('script');
+importjava.src = 'questions.js';
+document.head.appendChild(importjava);
+
+
+//start button javascript stuff
+var startbtn = document.getElementById('start-btn');
+startbtn.addEventListener('click',starter);
+function starter() {
+    console.log("The game begins!");
+
 }
 
-//https://www.youtube.com/watch?v=C7NsIRhoWuE
+function nextbutton() {
+
+}
+
+function selectanswer() {
+
+}

@@ -58,5 +58,5 @@ var questions = [
 		title: "which color is not on the rainbow?",
 		choices: ["cheese", "red", "black", "yellow"],
 		answer: "black"
-    },
+    }
 ]
